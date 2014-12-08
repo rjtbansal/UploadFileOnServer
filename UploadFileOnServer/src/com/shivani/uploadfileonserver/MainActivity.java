@@ -57,7 +57,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		btnselectpic.setOnClickListener(this);
 		uploadButton.setOnClickListener(this);
 
-		upLoadServerUri = "http://www.gangania19.com/PHPJavaServer.php?fileName=";
+		upLoadServerUri = "http://www.gangania19.com/PHPJavaServer.php";
 		ImageView img = new ImageView(this);
 
 	}
@@ -143,7 +143,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			try {
 				// open a URL connection to the Servlet
 				FileInputStream fileInputStream = new FileInputStream(sourceFile);
-				URL url = new URL(upLoadServerUri+fName);
+				URL url = new URL(upLoadServerUri);
 
 				// Open a HTTP connection to the URL
 				conn = (HttpURLConnection) url.openConnection();
